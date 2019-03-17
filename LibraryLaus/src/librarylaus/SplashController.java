@@ -33,29 +33,36 @@ public class SplashController implements Initializable{
     private Label lblLoad;
     
     private LibraryLaus lib;
+    private Thread th;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         
-         this.progress_bar();
+        try {
+            this.progress_bar();
+        } catch (InterruptedException ex) {
+            Logger.getLogger(SplashController.class.getName()).log(Level.SEVERE, null, ex);
+        }
           
     }
     
     public void initialise_instance() {
         
         this.imViewScreen = new ImageView();
+        this.th           = new Thread();
         
     }
     
-    public void progress_bar() {
+    public void progress_bar() throws InterruptedException {
         
         this.initialise_instance();
         int i = 0;
         
-        while(i<=100){
-          
+        while(i < 100){
+            
             this.progressbar.setProgress(i);
             this.lblPourc.setText(i+"%"); 
+            Thread.sleep(2000);
 
             i++;
         }
