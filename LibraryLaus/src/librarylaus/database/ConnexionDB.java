@@ -5,10 +5,39 @@
  */
 package librarylaus.database;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
 /**
  *
  * @author gaelmmg
  */
 public class ConnexionDB {
+    
+    private Connection connect;
+    private String url;
+    private String user;
+    private String pwd;
+    
+    private ConnexionDB() throws SQLException{
+       
+        this.initialise();
+        
+        this.connect = DriverManager.getConnection(this.url, this.user, this.pwd);
+        
+    }
+    
+    private void initialise(){
+        
+        this.url = "jdbc:mysql://localhost:/Laus";
+        this.user = "root";
+        this.pwd = "";
+    }
+    
+    public ConnexionDB getInstance() throws SQLException{ return new ConnexionDB(); }
+    
+    public Connection getConnexion() throws SQLException{ return this.connect; }
+    
     
 }
