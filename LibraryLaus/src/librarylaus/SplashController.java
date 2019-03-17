@@ -34,16 +34,18 @@ public class SplashController implements Initializable{
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         
-        for(int i=0; i<=100; i++){
-            try {
-                progressbar.setProgress(i);
-                this.lblPourc.setText(i+"%");
-                Thread.sleep(2000);
-            } catch (InterruptedException ex) {
-                Logger.getLogger(SplashController.class.getName()).log(Level.SEVERE, null, ex);
-            }
-            
-        }
+//        for(int i=0; i<=100; i++){
+//            try {
+//                progressbar.setProgress(i);
+//                this.lblPourc.setText(i+"%");
+//                Thread.sleep(2000);
+//            } catch (InterruptedException ex) {
+//                Logger.getLogger(SplashController.class.getName()).log(Level.SEVERE, null, ex);
+//            }
+//            
+//        }
+
+           this.progress_bar();
           
     }
     
@@ -60,7 +62,7 @@ public class SplashController implements Initializable{
         this.initialise_instance();
         int i = 0;
         
-        while(i<=100){
+        while(i<=10){
           
             this.progressbar.setProgress(i);
             this.lblPourc.setText(i+"%");
