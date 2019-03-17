@@ -20,6 +20,6 @@
             <Font size="26.0" />
          </font>
       </Label>
-      <Label layoutX="180.0" layoutY="193.0" prefHeight="16.0" prefWidth="109.0" text="Loading ..." textFill="#505050" />
+      <Label fx:id="lblLoad" layoutX="180.0" layoutY="193.0" prefHeight="16.0" prefWidth="109.0" text="Loading ..." textFill="#505050" />
    </children>
 </AnchorPane>
