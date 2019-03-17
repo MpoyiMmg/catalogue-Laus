@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ProgressBar?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -9,9 +10,10 @@
    <children>
       <ImageView fx:id="imViewScreen" fitHeight="215.0" fitWidth="314.0" layoutX="3.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../images/images.jpeg" />
+            <Image url="@images/images.jpeg" />
          </image>
       </ImageView>
       <ProgressBar fx:id="progressbar" layoutX="34.0" layoutY="185.0" prefHeight="6.0" prefWidth="255.0" progress="0.0" />
+      <Label layoutX="126.0" layoutY="149.0" prefHeight="25.0" prefWidth="54.0" text="lblPourc" />
    </children>
 </AnchorPane>

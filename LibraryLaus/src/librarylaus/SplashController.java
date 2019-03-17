@@ -7,9 +7,13 @@ package librarylaus;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Label;
 import javafx.scene.control.ProgressBar;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
 
@@ -23,14 +27,35 @@ public class SplashController implements Initializable{
     private ImageView imViewScreen;
     @FXML 
     private ProgressBar progressbar;
+    @FXML
+    private Label lblPourc;
+    private Image image;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-//        imViewScreen.setImage('images.jpeg');
-//        for(int i=0; i<=4; i++){
-//            progressbar.setProgress(i);
-//        }
+        this.initialise_instance();
+        for(int i=0; i<=100; i++){
+            try {
+                progressbar.setProgress(i);
+                this.lblPourc.setText(i+"%");
+                Thread.sleep(2000);
+            } catch (InterruptedException ex) {
+                Logger.getLogger(SplashController.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            
+        }
           
+    }
+    
+    public void initialise_instance(){
+        
+        this.imViewScreen = new ImageView();
+        this.lblPourc = new Label();
+        this.progressbar = new ProgressBar();
+        
+    }
+    
+    public void Progress_bar(){
     }
     
 }
