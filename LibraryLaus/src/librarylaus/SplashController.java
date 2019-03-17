@@ -55,7 +55,7 @@ public class SplashController implements Initializable{
         
     }
     
-    public void Progress_bar() {
+    public void progress_bar() {
         
         this.initialise_instance();
         int i = 0;
