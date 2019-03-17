@@ -10,15 +10,20 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 /**
- *
  * @author gaelmmg
  */
+
+// creation de la classe Singleton pour la connexion a 
+//                la base des donnees
+
+
 public class ConnexionDB {
     
     private Connection connect;
     private String url;
     private String user;
     private String pwd;
+    
     
     private ConnexionDB() throws SQLException{
        
@@ -38,6 +43,10 @@ public class ConnexionDB {
     public ConnexionDB getInstance() throws SQLException{ return new ConnexionDB(); }
     
     public Connection getConnexion() throws SQLException{ return this.connect; }
+    
+     public static void main(String[] args){
+    
+    }
     
     
 }
