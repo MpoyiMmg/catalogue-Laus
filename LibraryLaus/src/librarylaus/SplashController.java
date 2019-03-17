@@ -31,6 +31,8 @@ public class SplashController implements Initializable{
     private Label lblPourc;
     @FXML
     private Label lblLoad;
+    
+    private LibraryLaus lib;
     private Image image;
 
     @Override
@@ -56,8 +58,9 @@ public class SplashController implements Initializable{
         while(i<=100){
           
             this.progressbar.setProgress(i);
-            this.lblPourc.setText(i+"%");
+            this.lblPourc.setText(i+"%"); 
             
+            if(i == 100){}
             i++;
         }
     }

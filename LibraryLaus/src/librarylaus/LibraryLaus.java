@@ -18,7 +18,7 @@ import javafx.stage.StageStyle;
  */
 public class LibraryLaus extends Application {
     
-    public static Stage stage = null;
+    public  Stage stage = null;
     @Override
     public void start(Stage stage) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("Splash.fxml"));
@@ -28,9 +28,11 @@ public class LibraryLaus extends Application {
         stage.initStyle(StageStyle.UNDECORATED);
         this.stage = stage;
         
-        stage.setScene(scene);
-        stage.show();
+        this.stage.setScene(scene);
+        this.stage.show();
     }
+    
+    public Stage getStage(){return this.stage;}
 
     /**
      * @param args the command line arguments
