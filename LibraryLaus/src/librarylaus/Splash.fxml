@@ -5,6 +5,7 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="215.0" prefWidth="310.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="librarylaus.SplashController">
    <children>
@@ -14,6 +15,10 @@
          </image>
       </ImageView>
       <ProgressBar fx:id="progressbar" layoutX="34.0" layoutY="185.0" prefHeight="6.0" prefWidth="255.0" progress="0.0" />
-      <Label layoutX="126.0" layoutY="149.0" prefHeight="25.0" prefWidth="54.0" text="lblPourc" />
+      <Label layoutX="126.0" layoutY="149.0" prefHeight="25.0" prefWidth="54.0" text="lblPourc" textFill="WHITE">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

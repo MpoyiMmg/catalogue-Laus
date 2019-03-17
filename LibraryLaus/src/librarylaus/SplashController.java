@@ -33,7 +33,7 @@ public class SplashController implements Initializable{
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        this.initialise_instance();
+        
         for(int i=0; i<=100; i++){
             try {
                 progressbar.setProgress(i);
@@ -47,7 +47,7 @@ public class SplashController implements Initializable{
           
     }
     
-    public void initialise_instance(){
+    public void initialise_instance() {
         
         this.imViewScreen = new ImageView();
         this.lblPourc = new Label();
@@ -55,7 +55,18 @@ public class SplashController implements Initializable{
         
     }
     
-    public void Progress_bar(){
+    public void Progress_bar() {
+        
+        this.initialise_instance();
+        int i = 0;
+        
+        while(i<=100){
+          
+            this.progressbar.setProgress(i);
+            this.lblPourc.setText(i+"%");
+            
+            i++;
+        }
     }
     
 }
