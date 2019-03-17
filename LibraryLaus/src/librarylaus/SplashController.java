@@ -33,7 +33,6 @@ public class SplashController implements Initializable{
     private Label lblLoad;
     
     private LibraryLaus lib;
-    private Image image;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -45,8 +44,6 @@ public class SplashController implements Initializable{
     public void initialise_instance() {
         
         this.imViewScreen = new ImageView();
-//        this.lblPourc = new Label();
-//        this.progressbar = new ProgressBar();
         
     }
     
@@ -59,8 +56,7 @@ public class SplashController implements Initializable{
           
             this.progressbar.setProgress(i);
             this.lblPourc.setText(i+"%"); 
-            
-            if(i == 100){}
+
             i++;
         }
     }
