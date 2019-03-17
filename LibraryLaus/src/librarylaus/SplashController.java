@@ -29,31 +29,22 @@ public class SplashController implements Initializable{
     private ProgressBar progressbar;
     @FXML
     private Label lblPourc;
+    @FXML
+    private Label lblLoad;
     private Image image;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         
-//        for(int i=0; i<=100; i++){
-//            try {
-//                progressbar.setProgress(i);
-//                this.lblPourc.setText(i+"%");
-//                Thread.sleep(2000);
-//            } catch (InterruptedException ex) {
-//                Logger.getLogger(SplashController.class.getName()).log(Level.SEVERE, null, ex);
-//            }
-//            
-//        }
-
-           this.progress_bar();
+         this.progress_bar();
           
     }
     
     public void initialise_instance() {
         
         this.imViewScreen = new ImageView();
-        this.lblPourc = new Label();
-        this.progressbar = new ProgressBar();
+//        this.lblPourc = new Label();
+//        this.progressbar = new ProgressBar();
         
     }
     
@@ -62,7 +53,7 @@ public class SplashController implements Initializable{
         this.initialise_instance();
         int i = 0;
         
-        while(i<=10){
+        while(i<=100){
           
             this.progressbar.setProgress(i);
             this.lblPourc.setText(i+"%");

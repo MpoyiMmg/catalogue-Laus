@@ -14,11 +14,12 @@
             <Image url="@images/images.jpeg" />
          </image>
       </ImageView>
-      <ProgressBar fx:id="progressbar" layoutX="34.0" layoutY="185.0" prefHeight="6.0" prefWidth="255.0" progress="0.0" />
-      <Label fx:id="lblPourc" layoutX="126.0" layoutY="149.0" prefHeight="25.0" prefWidth="54.0" textFill="WHITE">
+      <ProgressBar fx:id="progressbar" layoutX="34.0" layoutY="185.0" opacity="0.35" prefHeight="6.0" prefWidth="255.0" progress="0.0" />
+      <Label fx:id="lblPourc" layoutX="115.0" layoutY="147.0" prefHeight="31.0" prefWidth="80.0" textFill="WHITE">
          <font>
             <Font size="26.0" />
          </font>
       </Label>
+      <Label layoutX="180.0" layoutY="193.0" prefHeight="16.0" prefWidth="109.0" text="Loading ..." textFill="#505050" />
    </children>
 </AnchorPane>
