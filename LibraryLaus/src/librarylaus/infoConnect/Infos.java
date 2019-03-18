@@ -11,4 +11,8 @@ package librarylaus.infoConnect;
  */
 public class Infos {
     
+    private String user;
+    private String pwd;
+    private String url;
+    
 }
