@@ -8,6 +8,7 @@ package librarylaus.database;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+import librarylaus.infoConnect.Infos;
 
 /**
  * @author gaelmmg
@@ -21,25 +22,25 @@ public class ConnexionDB {
     
     private static Connection connect = null;
     private static ConnexionDB conDb = null;
-    private String url;
-    private String user;
-    private String pwd;
+    
+    private Infos info;
     
     
     private ConnexionDB() throws SQLException{
-       
         this.initialise();
-        
-//        this.connect = DriverManager.getConnection(this.url, this.user, this.pwd);
-        
     }
     
     private void initialise(){
         
-        this.url = "jdbc:mysql://localhost:/Laus";
-        this.user = "root";
-        this.pwd = "";
+        String url = "jdbc:mysql://localhost:/Laus";
+        String user = "root";
+        String pwd = "";
         
+        this.info = new Infos();
+        
+        this.info.setUrl(url);
+        this.info.setUser(user);
+        this.info.setPwd(pwd);
     }
     
     public static ConnexionDB getInstance() throws SQLException { 
@@ -50,7 +51,9 @@ public class ConnexionDB {
     
     public Connection getConnexion() throws SQLException{ 
         
-        if(ConnexionDB.connect == null){ ConnexionDB.connect = DriverManager.getConnection(this.url, this.user, this.pwd); }
+        if(ConnexionDB.connect == null){ ConnexionDB.connect = DriverManager.getConnection(this.info.getUrl(), 
+                                                                                           this.info.getUser(),
+                                                                                           this.info.getPwd()); }
         System.out.println("connexion reussie");
         return this.connect; }
     
