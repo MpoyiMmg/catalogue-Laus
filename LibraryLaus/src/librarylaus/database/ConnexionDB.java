@@ -19,7 +19,8 @@ import java.sql.SQLException;
 
 public class ConnexionDB {
     
-    private Connection connect;
+    private static Connection connect = null;
+    private static ConnexionDB conDb = null;
     private String url;
     private String user;
     private String pwd;
@@ -29,7 +30,7 @@ public class ConnexionDB {
        
         this.initialise();
         
-        this.connect = DriverManager.getConnection(this.url, this.user, this.pwd);
+//        this.connect = DriverManager.getConnection(this.url, this.user, this.pwd);
         
     }
     
@@ -38,10 +39,19 @@ public class ConnexionDB {
         this.url = "jdbc:mysql://localhost:/Laus";
         this.user = "root";
         this.pwd = "";
+        
     }
     
-    public ConnexionDB getInstance() throws SQLException{ return new ConnexionDB(); }
+    public static ConnexionDB getInstance() throws SQLException { 
+        
+        if(ConnexionDB.conDb == null){ ConnexionDB.conDb = new ConnexionDB(); }
+        return ConnexionDB.conDb; 
+    }
     
-    public Connection getConnexion() throws SQLException{ return this.connect; }
+    public Connection getConnexion() throws SQLException{ 
+        
+        if(ConnexionDB.connect == null){ ConnexionDB.connect = DriverManager.getConnection(this.url, this.user, this.pwd); }
+        System.out.println("connexion reussie");
+        return this.connect; }
     
 }
