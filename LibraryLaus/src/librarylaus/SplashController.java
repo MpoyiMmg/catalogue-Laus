@@ -25,10 +25,13 @@ public class SplashController implements Initializable,Runnable{
     
     @FXML
     private ImageView imViewScreen;
+    
     @FXML 
     private ProgressBar progressbar;
+    
     @FXML
     private Label lblPourc;
+    
     @FXML
     private Label lblLoad;
     
@@ -53,20 +56,17 @@ public class SplashController implements Initializable,Runnable{
     
     public void run() {
         
-        this.th = new Thread();
-        
         this.initialise_instance();
+        
         int i = 0;
         
         while(i < 100){
             
             this.progressbar.setProgress(i);
             this.lblPourc.setText(i+"%"); 
-            try {
-                th.sleep(40);
-            } catch (InterruptedException ex) {
-                Logger.getLogger(SplashController.class.getName()).log(Level.SEVERE, null, ex);
-            }
+            
+            try { th.sleep(40); } 
+            catch (InterruptedException ex) { Logger.getLogger(SplashController.class.getName()).log(Level.SEVERE, null, ex); }
 
             i++;
         }
