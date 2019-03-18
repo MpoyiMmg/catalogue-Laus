@@ -44,8 +44,8 @@ public class ConnexionDB {
     
     public Connection getConnexion() throws SQLException{ return this.connect; }
     
-     public static void main(String[] args){
-    
+    public static void main(String[] args){
+        
     }
     
     

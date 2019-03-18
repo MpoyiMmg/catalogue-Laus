@@ -21,7 +21,7 @@ import javafx.scene.image.ImageView;
  *
  * @author gaelmmg
  */
-public class SplashController implements Initializable{
+public class SplashController implements Initializable,Runnable{
     
     @FXML
     private ImageView imViewScreen;
@@ -38,11 +38,9 @@ public class SplashController implements Initializable{
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         
-        try {
-            this.progress_bar();
-        } catch (InterruptedException ex) {
-            Logger.getLogger(SplashController.class.getName()).log(Level.SEVERE, null, ex);
-        }
+        
+            this.run();
+        
           
     }
     
@@ -53,7 +51,9 @@ public class SplashController implements Initializable{
         
     }
     
-    public void progress_bar() throws InterruptedException {
+    public void run() {
+        
+        this.th = new Thread();
         
         this.initialise_instance();
         int i = 0;
@@ -62,7 +62,11 @@ public class SplashController implements Initializable{
             
             this.progressbar.setProgress(i);
             this.lblPourc.setText(i+"%"); 
-            Thread.sleep(2000);
+            try {
+                th.sleep(40);
+            } catch (InterruptedException ex) {
+                Logger.getLogger(SplashController.class.getName()).log(Level.SEVERE, null, ex);
+            }
 
             i++;
         }
