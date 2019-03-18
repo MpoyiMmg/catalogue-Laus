@@ -32,7 +32,7 @@ public class SplashController implements Initializable,Runnable{
     @FXML
     private Label lblLoad;
     
-    private LibraryLaus lib;
+    private Launch lib;
     private Thread th;
 
     @Override

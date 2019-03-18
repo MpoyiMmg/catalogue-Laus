@@ -12,33 +12,31 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
-/**
- *
- * @author gaelmmg
- */
-public class LibraryLaus extends Application {
+/* @author gaelmmg */
+
+public class Launch extends Application {
     
     public  Stage stage = null;
+    
+//    ============================================================================>
     @Override
     public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("Splash.fxml"));
         
+        Parent root = FXMLLoader.load(getClass().getResource("view/Splah.fxml"));
         Scene scene = new Scene(root);
         
         stage.initStyle(StageStyle.UNDECORATED);
-        this.stage = stage;
         
+        this.stage = stage;
         this.stage.setScene(scene);
         this.stage.show();
     }
     
+//    ============================================================================>
     public Stage getStage(){return this.stage;}
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        launch(args);
-    }
+//    ============================================================================>
+    public static void main(String[] args) { launch(args); }
+//    ============================================================================>
     
 }
