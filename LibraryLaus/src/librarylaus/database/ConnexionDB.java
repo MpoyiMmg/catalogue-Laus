@@ -24,4 +24,7 @@ public class ConnexionDB {
     private String user     = "root";
     private String password = "";
     
+    private ConnexionDB(){
+    }
+    
 }
