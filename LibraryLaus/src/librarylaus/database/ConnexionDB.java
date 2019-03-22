@@ -26,12 +26,14 @@ public class ConnexionDB {
    
     private static Connection connect;
     
-    private ConnexionDB(){
+    private ConnexionDB() throws ClassNotFoundException {
+        Class.forName("com.mysql.jdbc.Driver");
+        
         try{connect = DriverManager.getConnection(url, user, password);}
         catch(SQLException e){e.printStackTrace();}
     }
     
-    public static Connection getInstance(){
+    public static Connection getInstance() throws ClassNotFoundException{
         if(connect == null){    new ConnexionDB();  }
         return connect;
     }

@@ -5,6 +5,7 @@
  */
 package librarylaus.database;
 
+import java.sql.Connection;
 import java.sql.SQLException;
 
 /**
@@ -12,8 +13,8 @@ import java.sql.SQLException;
  * @author gaelmmg
  */
 public class Test {
-    public static void main(String[] args) throws SQLException{
-        ConnexionDB conn = ConnexionDB.getInstance();
+    public static void main(String[] args) throws SQLException, ClassNotFoundException{
+        Connection conn = ConnexionDB.getInstance();
         
         System.out.println("connxion etablie");
     }
