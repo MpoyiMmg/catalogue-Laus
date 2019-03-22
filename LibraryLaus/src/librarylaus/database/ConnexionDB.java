@@ -23,8 +23,17 @@ public class ConnexionDB {
     private String url      = "jdbc:mysql://localhost/Laus";
     private String user     = "root";
     private String password = "";
+   
+    private static Connection connect;
     
     private ConnexionDB(){
+        try{connect = DriverManager.getConnection(url, user, password);}
+        catch(SQLException e){e.printStackTrace();}
+    }
+    
+    public static Connection getInstance(){
+        if(connect == null){    new ConnexionDB();  }
+        return connect;
     }
     
 }
