@@ -15,4 +15,7 @@ public class Chant {
     private String nom;
     private String auteur;
     private String type;
+    
+    
+    public Chant(){}
 }
