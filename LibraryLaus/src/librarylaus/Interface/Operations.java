@@ -12,4 +12,5 @@ package librarylaus.Interface;
 public interface Operations {
     
     public abstract void insert(Object obj);
+    public abstract void update(Object obj);
 }
