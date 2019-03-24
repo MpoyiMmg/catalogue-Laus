@@ -11,4 +11,5 @@ package librarylaus.models.Structure;
  */
 public class Chant {
     
+    private int id;
 }
