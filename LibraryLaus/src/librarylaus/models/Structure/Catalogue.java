@@ -33,7 +33,7 @@ public class Catalogue {
 //        }
 //    }
     
-    
+    public int getId(){return this.id;}
     
     
 }
