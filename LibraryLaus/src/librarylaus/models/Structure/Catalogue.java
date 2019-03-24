@@ -20,28 +20,19 @@ public class Catalogue {
         
     }
     
-//    public Object getAttribut(Object attribut){
-//        
-//        switch((String) attribut){
-//            case "id":
-//                return this.id;
-////            break;
-//            case "idChant":
-//                return this.idChant;
-//               
-//            
-//        }
-//    }
+//      Getters
     
     public int getId(){return this.id;}
     public int getIdChant(){return this.idChant;}
     public String getNom(){return this.nom;}
     public String getDescription(){return this.description;}
     
+//    Setters
     
     public void setId(int id){this.id = id;}
     public void setIdChant(int idchant){this.idChant = idchant;}
     public void setNom(String nom){this.nom = nom;}
+    public void setDescription(String description){this.description = description;}
     
     
 }
