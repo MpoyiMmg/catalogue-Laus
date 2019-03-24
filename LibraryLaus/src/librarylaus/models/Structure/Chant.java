@@ -21,5 +21,16 @@ public class Chant {
     
 //    Getters
     
-    public int getId(){return this.id;}
+    public int getId(){
+        return this.id;
+    }
+
+    public String getAuteur() {
+        return auteur;
+    }
+
+    public String getNom() {
+        return nom;
+    }
+    
 }
