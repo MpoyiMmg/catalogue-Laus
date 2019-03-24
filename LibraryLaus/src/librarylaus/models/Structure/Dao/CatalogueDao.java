@@ -5,10 +5,27 @@
  */
 package librarylaus.models.Structure.Dao;
 
+import librarylaus.Interface.Operations;
+
 /**
  *
  * @author gaelmmg
  */
-public class CatalogueDao {
+public class CatalogueDao implements Operations{
+
+    @Override
+    public void insert(Object obj) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void update(Object obj) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void delete(Object obj) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
 }
