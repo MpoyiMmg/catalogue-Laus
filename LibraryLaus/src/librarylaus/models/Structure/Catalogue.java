@@ -10,9 +10,16 @@ package librarylaus.models.Structure;
  * @author gaelmmg
  */
 public class Catalogue {
+    
     private int id;
     private int idChant;
     private String nom;
     private String description;
+    
+    public Catalogue(){
+    
+    }
+    
+    
     
 }
