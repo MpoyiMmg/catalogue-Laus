@@ -14,4 +14,5 @@ public class Chant {
     private int id;
     private String nom;
     private String auteur;
+    private String type;
 }
