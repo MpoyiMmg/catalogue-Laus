@@ -36,6 +36,7 @@ public class Catalogue {
     public int getId(){return this.id;}
     public int getIdChant(){return this.idChant;}
     public String getNom(){return this.nom;}
+    public String getDescription(){return this.description;}
     
     
 }
