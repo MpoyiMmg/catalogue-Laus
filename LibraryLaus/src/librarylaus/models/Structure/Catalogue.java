@@ -20,16 +20,19 @@ public class Catalogue {
         
     }
     
-    public Object getAttribut(Object attribut){
-        
-        switch((String)attribut){
-            case "id":
-                return this.id;
-//            break;
-            case "idChant":
-                return this.idChant;
-        }
-    }
+//    public Object getAttribut(Object attribut){
+//        
+//        switch((String) attribut){
+//            case "id":
+//                return this.id;
+////            break;
+//            case "idChant":
+//                return this.idChant;
+//               
+//            
+//        }
+//    }
+    
     
     
     
