@@ -25,6 +25,10 @@ public class Chant {
         return this.id;
     }
 
+    public String getType() {
+        return type;
+    }
+
     public String getAuteur() {
         return auteur;
     }
@@ -32,5 +36,7 @@ public class Chant {
     public String getNom() {
         return nom;
     }
+    
+//    Setters
     
 }
