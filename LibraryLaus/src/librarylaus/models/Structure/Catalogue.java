@@ -39,4 +39,7 @@ public class Catalogue {
     public String getDescription(){return this.description;}
     
     
+    public void setId(int id){this.id = id;}
+    
+    
 }
