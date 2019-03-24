@@ -18,4 +18,8 @@ public class Chant {
     
     
     public Chant(){}
+    
+//    Getters
+    
+    public int getId(){return this.id;}
 }
