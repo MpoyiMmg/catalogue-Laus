@@ -25,7 +25,9 @@ public class Catalogue {
         switch((String)attribut){
             case "id":
                 return this.id;
-                break;
+//            break;
+            case "idChant":
+                return this.idChant;
         }
     }
     
