@@ -41,7 +41,7 @@ public class Catalogue {
     
     public void setId(int id){this.id = id;}
     public void setIdChant(int idchant){this.idChant = idchant;}
-//    public void set
+    public void setNom(String nom){this.nom = nom;}
     
     
 }
