@@ -22,7 +22,11 @@ public class Catalogue {
     
     public Object getAttribut(Object attribut){
         
-        
+        switch((String)attribut){
+            case "id":
+                return this.id;
+                break;
+        }
     }
     
     
