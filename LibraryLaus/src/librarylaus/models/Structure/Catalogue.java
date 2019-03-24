@@ -13,5 +13,6 @@ public class Catalogue {
     private int id;
     private int idChant;
     private String nom;
+    private String description;
     
 }
