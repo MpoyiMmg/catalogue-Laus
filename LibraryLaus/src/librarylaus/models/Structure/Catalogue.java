@@ -17,7 +17,12 @@ public class Catalogue {
     private String description;
     
     public Catalogue(){
+        
+    }
     
+    public Object getAttribut(Object attribut){
+        
+        
     }
     
     
