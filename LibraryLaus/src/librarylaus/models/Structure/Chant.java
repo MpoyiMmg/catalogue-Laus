@@ -38,5 +38,23 @@ public class Chant {
     }
     
 //    Setters
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public void setNom(String nom) {
+        this.nom = nom;
+    }
+
+    public void setAuteur(String auteur) {
+        this.auteur = auteur;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+    
+    
     
 }
