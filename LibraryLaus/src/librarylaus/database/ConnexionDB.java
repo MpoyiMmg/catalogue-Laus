@@ -13,48 +13,29 @@ import librarylaus.infoConnect.Infos;
 /**
  * @author gaelmmg
  */
-
 // creation de la classe Singleton pour la connexion a 
 //                la base des donnees
 
 
 public class ConnexionDB {
     
-    private static Connection connect = null;
-    private static ConnexionDB conDb = null;
+            
+    private String url      = "jdbc:mysql://localhost/Laus";
+    private String user     = "root";
+    private String password = "";
+   
+    private static Connection connect;
     
-    private Infos info;
-    
-    
-    private ConnexionDB() throws SQLException{
-        this.initialise();
+    private ConnexionDB() throws ClassNotFoundException {
+        Class.forName("com.mysql.jdbc.Driver");
+        
+        try{connect = DriverManager.getConnection(url, user, password);}
+        catch(SQLException e){e.printStackTrace();}
     }
     
-    private void initialise(){
-        
-        String url = "jdbc:mysql://localhost:/Laus";
-        String user = "root";
-        String pwd = "";
-        
-        this.info = new Infos();
-        
-        this.info.setUrl(url);
-        this.info.setUser(user);
-        this.info.setPwd(pwd);
+    public static Connection getInstance() throws ClassNotFoundException{
+        if(connect == null){    new ConnexionDB();  }
+        return connect;
     }
-    
-    public static ConnexionDB getInstance() throws SQLException { 
-        
-        if(ConnexionDB.conDb == null){ ConnexionDB.conDb = new ConnexionDB(); }
-        return ConnexionDB.conDb; 
-    }
-    
-    public Connection getConnexion() throws SQLException{ 
-        
-        if(ConnexionDB.connect == null){ ConnexionDB.connect = DriverManager.getConnection(this.info.getUrl(), 
-                                                                                           this.info.getUser(),
-                                                                                           this.info.getPwd()); }
-        System.out.println("connexion reussie");
-        return this.connect; }
     
 }
